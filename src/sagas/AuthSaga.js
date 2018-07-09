@@ -28,5 +28,5 @@ export function * fetchLoginAPI (api, { data }) {
 }
 
 export function * logout (api, getToken) {
-  yield baseListen(AuthTypes.AUTH_LOGOUT_REQUEST, getMyDonationApi, api, getToken)
+  yield baseListen(AuthTypes.AUTH_LOGOUT_REQUEST, api, getToken)
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import NotificationSystem from 'react-notification-system'
-import { Router } from '../../routes'
+// import { Router } from '../../routes'
 // Components
 class Home extends React.Component {
   constructor (props) {
@@ -12,7 +11,7 @@ class Home extends React.Component {
 
   render () {
     return (
-     <div>Hello world</div>
+      <div>Hello world</div>
     )
   }
 }

@@ -12,6 +12,7 @@ import Document, { Head, Main, NextScript } from 'next/document'
 class HomeDocument extends Document {
   static async getInitialProps (ctx) {
     const props = await Document.getInitialProps(ctx)
+    return { ...props }
     // const { query } = ctx
     // let link = (query.urlLink && query.urlLink !== 'favicon.ico') ? query.urlLink : null
     // let company
@@ -42,22 +43,21 @@ class HomeDocument extends Document {
     // }
   }
 
-  constructor (props) {
-    super(props)
+  // constructor (props) {
+  //   super(props)
     // Raven.config(`https://${RavenSecretKey}@sentry.io/${RavenId}`).install()
-  }
+  // }
 
   // componentDidCatch (error, errorInfo) {
   //   Raven.captureException(error, { extra: errorInfo })
   // }
 
   render () {
-    const { name, title, image, description } = this.props
     return (
       <html lang={this.props.__NEXT_DATA__.props.lang || 'en'}>
         <Head>
           <meta charSet='UTF-8' />
-          <title>{name}</title>
+          <title>title</title>
           <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
           <meta name='apple-mobile-web-app-status-bar-style' content='black' />
           <link rel='stylesheet prefetch' href={`/static/css/styles.min.css`} />
